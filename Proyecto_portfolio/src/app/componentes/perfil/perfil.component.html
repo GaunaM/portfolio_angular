@@ -1,8 +1,8 @@
 <div class="contenedor-perfil">
     <div id="perfil">
-      <img src="Proyecto_portfolio/src/assets/Imagenes/perfil.jpg">
-      <h2>Magalí Gauna</h2>
-      <h5>Full Stack Developer Jr</h5>
+      <img [src]="miPortfolio.image">
+      <h2>{{miPortfolio.name}}</h2>
+      <h5>{{miPortfolio.position}}</h5>
       <p>Acerca de mi profesionalmente</p>
 
       <div class="boton-foto"><button class="fa-solid fa-pencil"></button></div>
@@ -10,7 +10,7 @@
     
     </div>
     <div id="banner">
-        <img src="Proyecto_portfolio/src/assets/Imagenes/banner.jpg">
+        <img [src]="miPortfolio.banner">
     </div>
 </div>
 
