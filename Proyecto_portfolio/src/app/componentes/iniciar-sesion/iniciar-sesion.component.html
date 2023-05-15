@@ -1,0 +1,26 @@
+<form [formGroup]="form">
+    <div class="form-login">
+      <h2>Iniciar Sesion</h2>
+      <input type="email" formControlName="email" class="cajas" placeholder="Correo electronico">
+      <div *ngIf="Email?.errors && Email?.touched">
+        <p *ngIf="Email?.hasError('required')" class="text-danger">
+          El email es requerido.
+        </p>
+        <p *ngIf="Email?.hasError('email')" class="text-danger">
+          El formato del email debe ser válido.
+        </p>
+      </div>
+
+      <input type="password" formControlName="password" class="cajas" placeholder="Contraseña">
+      <div *ngIf="Password?.errors && Password?.touched">
+        <p *ngIf="Password?.hasError('required')" class="text-danger">
+          La contraseña es requerido.
+        </p>
+        <p *ngIf="Password?.errors?.['minlength']" class="text-danger">
+          La contraseña debe ser de 8 o más carácteres.
+        </p>
+      </div>
+      <button type="submit" class="boton">Enviar</button>
+    </div>
+    
+  </form>
